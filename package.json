@@ -1,6 +1,6 @@
 {
   "name": "@open-source-initiative/notify-email",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodemailer wrapper for simple \"send email\" cases",
   "main": "build/index.js",
   "scripts": {
