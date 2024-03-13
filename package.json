@@ -1,6 +1,6 @@
 {
   "name": "@open-source-initiative/notify-email",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodemailer wrapper for simple \"send email\" cases",
   "main": "build/index.js",
   "scripts": {
@@ -23,5 +23,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/nodemailer": "^6.4.14"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.12"
   }
 }
