@@ -1,22 +1,14 @@
 import nodemailer from 'nodemailer';
+import { EmailConfigs } from '../build';
 
 export * as EmailConfigs from './configs';
 
 export class Email {
 
     private configs: nodemailer.TransportOptions;
-    private username: string;
-    private password: string;
 
-    constructor({username, password}: {username: string, password: string}, configs: nodemailer.TransportOptions){
-        this.username = username;
-        this.password = password;
+    constructor(configs: nodemailer.TransportOptions){
         this.configs = configs;
-    }
-
-    public setCredentials({username, password}: {username: string; password: string}){
-        this.username = username;
-        this.password = password;
     }
 
     public setConfigurations(configs: any){
@@ -24,10 +16,6 @@ export class Email {
     }
 
     public async sendEmail(payload: nodemailer.SendMailOptions){
-
-        if(!this.username || !this.password){
-            throw new Error('Email Credentials Not Set');
-        }
 
         if(!this.configs){
             throw new Error('Email Configurations Not Set');
