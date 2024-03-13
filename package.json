@@ -23,5 +23,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/nodemailer": "^6.4.14"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.12"
   }
 }
