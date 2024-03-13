@@ -1,0 +1,27 @@
+{
+  "name": "@open-source-initiative/notify-email",
+  "version": "1.0.0",
+  "description": "Nodemailer wrapper for simple \"send email\" cases",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/leemlwando/notify-email-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leemlwando/notify-email-library/issues"
+  },
+  "homepage": "https://github.com/leemlwando/notify-email-library#readme",
+  "keywords": [
+    "Notify",
+    "Email"
+  ],
+  "author": "lee M. Lwando <leemlwando@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.14"
+  }
+}
