@@ -1,5 +1,12 @@
 import nodemailer from 'nodemailer'
 
+export const BASE_CONFIGS = {
+    secure: true,
+    tls: {
+        rejectUnauthorized: true
+    }
+}
+
 export const buildBasicConfigs = ({ host, port, username, password }: { host: string, port?: number, username: string, password: string }, configs?: nodemailer.TransportOptions) => {
     return {
         ...BASE_CONFIGS,
@@ -12,11 +19,3 @@ export const buildBasicConfigs = ({ host, port, username, password }: { host: st
         ...configs
     }
 }
-
-export const BASE_CONFIGS = {
-    secure: true,
-    tls: {
-        rejectUnauthorized: true
-    }
-}
-

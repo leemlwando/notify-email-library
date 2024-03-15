@@ -1,4 +1,10 @@
 import nodemailer from 'nodemailer';
+export declare const BASE_CONFIGS: {
+    secure: boolean;
+    tls: {
+        rejectUnauthorized: boolean;
+    };
+};
 export declare const buildBasicConfigs: ({ host, port, username, password }: {
     host: string;
     port?: number | undefined;
@@ -12,12 +18,6 @@ export declare const buildBasicConfigs: ({ host, port, username, password }: {
         user: string;
         pass: string;
     };
-    secure: boolean;
-    tls: {
-        rejectUnauthorized: boolean;
-    };
-};
-export declare const BASE_CONFIGS: {
     secure: boolean;
     tls: {
         rejectUnauthorized: boolean;
