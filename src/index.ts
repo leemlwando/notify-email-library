@@ -1,6 +1,4 @@
 import nodemailer from 'nodemailer';
-import { EmailConfigs } from '../build';
-
 export * as EmailConfigs from './configs';
 
 export class Email {
