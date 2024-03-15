@@ -39,23 +39,14 @@ exports.Email = exports.EmailConfigs = void 0;
 const nodemailer_1 = __importDefault(require("nodemailer"));
 exports.EmailConfigs = __importStar(require("./configs"));
 class Email {
-    constructor({ username, password }, configs) {
-        this.username = username;
-        this.password = password;
+    constructor(configs) {
         this.configs = configs;
-    }
-    setCredentials({ username, password }) {
-        this.username = username;
-        this.password = password;
     }
     setConfigurations(configs) {
         this.configs = configs;
     }
     sendEmail(payload) {
         return __awaiter(this, void 0, void 0, function* () {
-            if (!this.username || !this.password) {
-                throw new Error('Email Credentials Not Set');
-            }
             if (!this.configs) {
                 throw new Error('Email Configurations Not Set');
             }
